@@ -1,5 +1,5 @@
 const sumAll = function(from, to) {
-    if (from < 0 || to < 0) return "ERROR";
+    if (!isPositiveInteger(from) || !isPositiveInteger(to)) return "ERROR";
 
     if (from < to)
     {
@@ -8,6 +8,11 @@ const sumAll = function(from, to) {
     else
     {
         return from * (from + 1) / 2 - to * (to - 1) / 2;
+    }
+
+    function isPositiveInteger(num)
+    {
+        return Number.isInteger(num) && num >= 0;
     }
 };
 
