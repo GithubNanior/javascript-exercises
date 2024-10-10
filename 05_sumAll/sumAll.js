@@ -1,4 +1,6 @@
 const sumAll = function(from, to) {
+    if (from < 0 || to < 0) return "ERROR";
+
     if (from < to)
     {
         return to * (to + 1) / 2 - from * (from - 1) / 2;
